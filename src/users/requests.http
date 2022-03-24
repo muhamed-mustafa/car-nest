@@ -1,0 +1,42 @@
+### Create a new user
+POST https://thawing-tundra-21039.herokuapp.com/auth/signup
+content-type: application/json
+
+{
+  "email": "muhammed14mustafa@gmail.com",
+  "password": "mohamed14"
+}
+
+### signin with an existing email
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "muhammed14mustafa@gmail.com",
+  "password": "mohamed14"
+}
+
+### get the current user
+GET  http://localhost:3000/auth/whoami
+
+### SignOut
+POST http://localhost:3000/auth/signout
+
+
+
+### Find a particular user with a given ID
+GET http://localhost:3000/auth/9
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=muhammedmustafa@gmail.com
+
+### Delete a user given id
+DELETE http://localhost:3000/auth/10
+
+### Update a user
+PATCH http://localhost:3000/auth/9
+content-type: application/json
+
+{
+  "password": "mohamed14@"
+}
